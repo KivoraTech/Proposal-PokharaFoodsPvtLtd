@@ -14,16 +14,27 @@ window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
 /* ---------- Mobile menu ---------- */
+const closeMenu = () => {
+  hamburger.classList.remove('open');
+  navLinks.classList.remove('open');
+  document.body.classList.remove('menu-open');
+  document.body.style.overflow = '';
+};
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  navLinks.classList.toggle('open');
+  const open = navLinks.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  document.body.classList.toggle('menu-open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
 });
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    navLinks.classList.remove('open');
-  });
+navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+document.addEventListener('click', e => {
+  if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && e.target !== hamburger) closeMenu();
 });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+const menuMq = window.matchMedia('(min-width: 1001px)');
+const onMenuMq = e => { if (e.matches) closeMenu(); };
+if (menuMq.addEventListener) menuMq.addEventListener('change', onMenuMq);
+else menuMq.addListener(onMenuMq);
 
 /* ---------- Reveal on scroll ---------- */
 const revealObserver = new IntersectionObserver(entries => {

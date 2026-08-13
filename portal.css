@@ -497,7 +497,7 @@
 .toast {
   position: fixed;
   left: 50%;
-  bottom: 28px;
+  bottom: calc(28px + env(safe-area-inset-bottom, 0px));
   transform: translateX(-50%);
   z-index: 300;
   background: var(--pine-deep);
@@ -505,10 +505,17 @@
   padding: 0.85rem 1.5rem;
   border-radius: 999px;
   font-size: 0.9rem;
+  text-align: center;
+  max-width: calc(100vw - 2rem);
   box-shadow: 0 16px 40px rgba(14, 31, 27, 0.4);
   animation: toastIn 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 @keyframes toastIn { from { opacity: 0; transform: translate(-50%, 16px); } to { opacity: 1; transform: translate(-50%, 0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .p-card { animation: none; }
+  .toast { animation: none; }
+}
 
 /* ============================================================
    RESPONSIVE
@@ -528,15 +535,38 @@
 }
 
 @media (max-width: 620px) {
-  .p-stats { grid-template-columns: 1fr 1fr; }
+  .p-stats { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
   .catalog-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .cart-line { grid-template-columns: 1fr auto; }
-  .cart-line-meta { grid-column: 1 / -1; text-align: left; }
+  .cart-line { grid-template-columns: 1fr auto auto; }
+  .cart-line-info { grid-column: 1 / 3; }
+  .cart-remove { grid-column: 3; }
+  .stepper { grid-column: 1; grid-row: 2; }
+  .cart-line-meta { grid-column: 2 / 4; grid-row: 2; text-align: right; }
+  .modal { padding: 0.75rem; }
+  .modal-head { height: 160px; }
   .modal-body { padding: 1.4rem 1.3rem 1.7rem; }
   .spec-grid { grid-template-columns: 1fr; }
   .catalog-tools { flex-direction: column; align-items: stretch; }
+  .panel { padding: 1.4rem; }
+  .tier { padding: 1.4rem; }
+  .coverage-map, .coverage-map iframe { min-height: 300px; }
+  .portal-hero { padding: 6.5rem 0 3.2rem; }
+  .how-grid { padding: 1.8rem 0; }
+
+  /* 16px inputs stop iOS auto-zoom on focus */
+  .catalog-tools input, .catalog-tools select,
+  .p-form input, .p-form select, .p-form textarea,
+  .stepper input { font-size: 16px; }
 }
 
 @media (max-width: 480px) {
   .catalog-grid { grid-template-columns: 1fr; }
+  .p-stat { padding: 1.1rem; }
+  .how-step { padding: 1rem 1.1rem; }
+  .modal-add .btn { min-width: 100%; }
+  .cart-line { grid-template-columns: 1fr auto; }
+  .cart-line-info { grid-column: 1; }
+  .cart-remove { grid-column: 2; }
+  .stepper { grid-column: 1 / -1; grid-row: 2; }
+  .cart-line-meta { grid-column: 1 / -1; grid-row: 3; text-align: left; }
 }
