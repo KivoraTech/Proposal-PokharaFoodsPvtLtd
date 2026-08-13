@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trade Portal | Pokhara Foods — Bakeland Wholesale</title>
+  <meta name="description" content="Pokhara Foods B2B trade portal — browse the Bakeland biscuit catalog with real photos and wholesale prices, calculate bulk orders and get a quote on WhatsApp in under two minutes. Retailer & distributor onboarding." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="portal.css" />
+</head>
+<body>
+
+  <!-- ================================================================
+       NAVBAR
+  ================================================================= -->
+  <nav class="navbar portal-nav scrolled">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="46" height="46">
+            <path d="M5 31 L16 15 L23 24 L29 17 L36 31 Z" fill="#f3be6a"/>
+            <circle cx="27" cy="11.5" r="3.2" fill="#e9a13b"/>
+            <path d="M9 27 L16 17 L21 23 L25 19 L30 27 Z" fill="rgba(251,247,239,0.35)"/>
+          </svg>
+        </span>
+        <span class="brand-text">Pokhara Foods<small>Trade Portal</small></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#catalog">Catalog</a></li>
+        <li><a href="#calculator">Bulk Inquiry <span class="cart-badge" id="cartBadge" hidden>0</span></a></li>
+        <li><a href="#partners">Partners</a></li>
+        <li><a href="#coverage">Coverage</a></li>
+      </ul>
+
+      <a href="index.html" class="btn btn-primary btn-sm">Corporate Site</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ================================================================
+       HERO
+  ================================================================= -->
+  <header class="portal-hero">
+    <svg class="hero-ridge" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="rgba(251,247,239,0.07)" d="M0,190 L200,90 L360,180 L560,60 L780,190 L980,110 L1200,200 L1440,130 L1440,260 L0,260 Z"/>
+      <path fill="rgba(251,247,239,0.13)" d="M0,230 L260,150 L470,235 L700,120 L940,240 L1160,170 L1440,225 L1440,260 L0,260 Z"/>
+    </svg>
+
+    <div class="container portal-hero-inner">
+      <div class="portal-hero-copy">
+        <p class="eyebrow hero-eyebrow">B2B Trade Portal</p>
+        <h1 class="hero-title">Order Bakeland<br /><em>in under two minutes</em></h1>
+        <p class="hero-sub">
+          Built for retailers and distributors — browse the full Bakeland catalog with
+          real photos and wholesale prices, calculate your bulk order, and send it to
+          our sales desk on WhatsApp. No phone calls, no waiting for a rep.
+        </p>
+        <div class="hero-actions">
+          <a href="#catalog" class="btn btn-primary">Browse the Catalog</a>
+          <a href="#calculator" class="btn btn-ghost">Start a Bulk Inquiry</a>
+        </div>
+        <ul class="hero-trust">
+          <li><span class="tick"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M3 8.5 6.5 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>MOQ from 5 cartons</li>
+          <li><span class="tick"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M3 8.5 6.5 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Quote on WhatsApp in 24 hrs</li>
+          <li><span class="tick"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M3 8.5 6.5 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Wholesale prices included</li>
+        </ul>
+      </div>
+
+      <div class="p-stats">
+        <div class="p-stat">
+          <span class="p-stat-value">Since <em style="color:var(--ivory)">1991</em></span>
+          <span class="p-stat-label">Baking in Pokhara</span>
+        </div>
+        <div class="p-stat">
+          <span class="p-stat-value">50+</span>
+          <span class="p-stat-label">Distribution partners</span>
+        </div>
+        <div class="p-stat">
+          <span class="p-stat-value">8</span>
+          <span class="p-stat-label">Bakeland SKUs online</span>
+        </div>
+        <div class="p-stat p-stat-accent">
+          <span class="p-stat-value">24h</span>
+          <span class="p-stat-label">Quote turnaround</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================================================================
+       HOW IT WORKS
+  ================================================================= -->
+  <section class="how">
+    <div class="container how-grid">
+      <div class="how-step reveal">
+        <span class="how-num">1</span>
+        <div>
+          <h4>Browse the catalog</h4>
+          <p>Filter by type, search by name — see photos, wholesale prices and MOQs instantly.</p>
+        </div>
+      </div>
+      <div class="how-step reveal">
+        <span class="how-num">2</span>
+        <div>
+          <h4>Calculate your order</h4>
+          <p>Pick cartons and watch the calculator total packs, weight and estimated value.</p>
+        </div>
+      </div>
+      <div class="how-step reveal">
+        <span class="how-num">3</span>
+        <div>
+          <h4>Get a quote on WhatsApp</h4>
+          <p>Send with one tap — our sales desk confirms the official quote and freight within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       CATALOG
+  ================================================================= -->
+  <section class="section portal-section" id="catalog">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Product Catalog</p>
+        <h2 class="section-title">The Bakeland <em>catalog</em></h2>
+        <p class="section-sub">
+          Every SKU with photos, pack details, wholesale price and minimum order quantities.
+          Prices shown are demo wholesale rates (excl. VAT &amp; freight).
+        </p>
+      </div>
+
+      <div class="catalog-tools reveal">
+        <input type="search" id="searchInput" placeholder="Search biscuits, e.g. 'digestive'…" aria-label="Search products" />
+        <select id="sortSelect" aria-label="Sort products">
+          <option value="featured">Sort: Featured</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+          <option value="name">Name: A → Z</option>
+        </select>
+      </div>
+
+      <div class="chips" id="catChips" aria-label="Filter by category"></div>
+      <p class="catalog-count" id="catalogCount" aria-live="polite"></p>
+
+      <div class="catalog-grid" id="catalogGrid"></div>
+
+      <div class="catalog-empty" id="catalogEmpty" hidden>
+        <p>No products match your search.</p>
+        <button class="btn btn-outline" id="resetFilters">Clear filters</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       BULK INQUIRY CALCULATOR
+  ================================================================= -->
+  <section class="section portal-section alt" id="calculator">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Bulk Inquiry Calculator</p>
+        <h2 class="section-title">Build your order. <em>Send it in one tap.</em></h2>
+        <p class="section-sub">
+          Add products from the catalog, adjust cartons, and send a structured inquiry
+          to our sales desk — pre-filled, ready to quote.
+        </p>
+      </div>
+
+      <div class="inq-layout">
+        <div class="inq-left reveal">
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Your bulk order</h3>
+              <button type="button" class="link-btn" id="clearCart">Clear all</button>
+            </div>
+
+            <div class="cart-empty" id="cartEmpty">
+              <p>Your order is empty.</p>
+              <a href="#catalog" class="btn btn-outline btn-sm">Browse the catalog</a>
+            </div>
+
+            <div class="cart-lines" id="cartLines"></div>
+
+            <div class="totals-card" id="totalsCard" hidden>
+              <div class="totals-row"><span>Total cartons</span><strong id="totCartons">0</strong></div>
+              <div class="totals-row"><span>Total packs</span><strong id="totPacks">0</strong></div>
+              <div class="totals-row"><span>Est. weight</span><strong id="totWeight">0 kg</strong></div>
+              <div class="totals-row totals-value"><span>Est. wholesale value</span><strong id="totValue">Rs. 0</strong></div>
+              <p class="totals-note">Demo pricing — the official quote, including freight to your district, is confirmed by our sales desk.</p>
+              <div class="totals-actions">
+                <button type="button" class="btn wa-btn" id="btnWa">Send Inquiry on WhatsApp</button>
+                <button type="button" class="btn btn-outline" id="btnEmail">Send via Email</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="inq-right reveal">
+          <form class="panel p-form" id="inquiryForm" onsubmit="return false;">
+            <h3 style="font-family:'Fraunces',serif; color:var(--pine-deep); margin-bottom:0.3rem">Your details</h3>
+            <p class="form-note">Used to address your quote — WhatsApp is our fastest channel.</p>
+            <input type="text" id="inqName" placeholder="Your name *" required />
+            <input type="text" id="inqCompany" placeholder="Shop / Company name" />
+            <input type="tel" id="inqPhone" placeholder="Phone / WhatsApp number *" required />
+            <select id="inqDistrict" aria-label="Your district">
+              <option value="">Your district…</option>
+            </select>
+            <textarea rows="3" id="inqNote" placeholder="Notes (optional) — delivery timeline, current supplier…"></textarea>
+            <p class="form-hint">Sending opens WhatsApp (or email) with your order pre-filled.</p>
+          </form>
+
+          <div class="panel confirm-card" id="confirmPanel" hidden>
+            <span class="confirm-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="30" height="30"><path d="M5 12.5 10 17.5 19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Inquiry received!</h3>
+            <p>Reference <strong id="confirmRef">PF-000000</strong> — our sales desk will confirm your official quote and freight within 24 hours (working days).</p>
+            <ul id="confirmSummary" class="confirm-summary"></ul>
+            <button type="button" class="btn btn-primary" id="newInquiry">Start a new inquiry</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       PARTNERS
+  ================================================================= -->
+  <section class="section portal-section" id="partners">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Partner Onboarding</p>
+        <h2 class="section-title">Become a <em>Bakeland partner</em></h2>
+        <p class="section-sub">
+          Choose the tier that fits your business. Apply in two minutes — our regional
+          team gets back to you with terms and route details.
+        </p>
+      </div>
+
+      <div class="tiers" id="tierCards">
+        <button type="button" class="tier reveal" data-tier="retailer">
+          <span class="tier-tag">Kirana · Supermarket</span>
+          <h3>Retailer</h3>
+          <p class="tier-moq">MOQ from 5 cartons</p>
+          <ul class="tier-benefits">
+            <li>Doorstep delivery in your district</li>
+            <li>Reorders via WhatsApp in seconds</li>
+            <li>Free shelf display &amp; promo material</li>
+            <li>Fresh stock, long shelf life</li>
+          </ul>
+          <span class="tier-vol">Est. 5 – 50 cartons / month</span>
+        </button>
+
+        <button type="button" class="tier reveal" data-tier="sub">
+          <span class="tier-tag">District-level</span>
+          <h3>Sub-Distributor</h3>
+          <p class="tier-moq">MOQ from 50 cartons</p>
+          <ul class="tier-benefits">
+            <li>Exclusive territory in your district</li>
+            <li>Trade margin on every carton</li>
+            <li>Credit terms after 3 months</li>
+            <li>Priority during peak season</li>
+          </ul>
+          <span class="tier-vol">Est. 50 – 200 cartons / month</span>
+        </button>
+
+        <button type="button" class="tier reveal" data-tier="cnf">
+          <span class="tier-tag">Regional</span>
+          <h3>Super-Distributor (C&amp;F)</h3>
+          <p class="tier-moq">MOQ from 200 cartons</p>
+          <ul class="tier-benefits">
+            <li>Regional exclusivity</li>
+            <li>Highest trade margin structure</li>
+            <li>Marketing &amp; launch support</li>
+            <li>Direct line to sales management</li>
+          </ul>
+          <span class="tier-vol">Est. 200+ cartons / month</span>
+        </button>
+      </div>
+
+      <form class="panel p-form partner-form reveal" id="partnerForm" onsubmit="return false;">
+        <h3 style="font-family:'Fraunces',serif; color:var(--pine-deep)">Apply as <span class="tier-label" id="tierLabel">Retailer</span></h3>
+        <div class="form-row">
+          <input type="text" id="partBusiness" placeholder="Business / shop name *" required />
+          <input type="text" id="partOwner" placeholder="Owner name *" required />
+        </div>
+        <div class="form-row">
+          <input type="tel" id="partPhone" placeholder="Phone / WhatsApp number *" required />
+          <select id="partDistrict" aria-label="Your district">
+            <option value="">Your district…</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <select id="partVolume" aria-label="Estimated monthly volume">
+            <option value="">Est. monthly volume…</option>
+            <option>Under 5 cartons</option>
+            <option>5 – 20 cartons</option>
+            <option>20 – 50 cartons</option>
+            <option>50 – 200 cartons</option>
+            <option>200+ cartons</option>
+          </select>
+          <input type="text" id="partSupplier" placeholder="Current supplier (optional)" />
+        </div>
+        <textarea rows="3" id="partNote" placeholder="Anything we should know? (optional)"></textarea>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" id="btnApply">Submit Application</button>
+          <button type="button" class="btn wa-btn" id="btnApplyWa">Submit &amp; notify on WhatsApp</button>
+        </div>
+
+        <div class="confirm-card mini" id="partnerConfirm" hidden>
+          <span class="confirm-check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M5 12.5 10 17.5 19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <p>Application received! Reference <strong id="partnerRef">PF-000000</strong> — our regional team will contact you within 2 working days.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       COVERAGE
+  ================================================================= -->
+  <section class="section portal-section alt" id="coverage">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Distribution Coverage</p>
+        <h2 class="section-title">Where we <em>deliver</em></h2>
+        <p class="section-sub">
+          Supplying from our plant at Pokhara Industrial Estate. New territories open as
+          distribution partners sign on.
+        </p>
+      </div>
+
+      <div class="coverage-grid">
+        <div class="zone-list reveal">
+          <div class="zone-item"><span class="zone-dot active"></span><span>Gandaki (HQ region)</span><span class="zone-status on">Active</span></div>
+          <div class="zone-item"><span class="zone-dot active"></span><span>Bagmati — Kathmandu Valley</span><span class="zone-status on">Active</span></div>
+          <div class="zone-item"><span class="zone-dot active"></span><span>Lumbini</span><span class="zone-status on">Active</span></div>
+          <div class="zone-item"><span class="zone-dot active"></span><span>Koshi</span><span class="zone-status on">Active</span></div>
+          <div class="zone-item"><span class="zone-dot pilot"></span><span>Madhesh</span><span class="zone-status pilot">Pilot</span></div>
+          <div class="zone-item"><span class="zone-dot pilot"></span><span>Karnali</span><span class="zone-status pilot">Pilot</span></div>
+          <div class="zone-item"><span class="zone-dot pilot"></span><span>Sudurpashchim</span><span class="zone-status pilot">Pilot</span></div>
+          <p class="zone-note">Not in your zone yet? Apply anyway — new routes open every quarter.</p>
+        </div>
+
+        <div class="coverage-map reveal">
+          <iframe
+            src="https://www.google.com/maps?q=Pokhara+Industrial+Estate,+Pokhara,+Nepal&output=embed"
+            title="Pokhara Foods plant — Pokhara Industrial Estate"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       FOOTER
+  ================================================================= -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="46" height="46">
+              <path d="M5 31 L16 15 L23 24 L29 17 L36 31 Z" fill="#f3be6a"/>
+              <circle cx="27" cy="11.5" r="3.2" fill="#e9a13b"/>
+              <path d="M9 27 L16 17 L21 23 L25 19 L30 27 Z" fill="rgba(251,247,239,0.35)"/>
+            </svg>
+          </span>
+          <span class="brand-text">Pokhara Foods<small>Trade Portal</small></span>
+        </a>
+        <p class="footer-desc">
+          The B2B trade portal of Pokhara Foods Pvt. Ltd. — browse, calculate and order
+          Bakeland biscuits wholesale.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Portal</h4>
+        <ul>
+          <li><a href="#catalog">Product Catalog</a></li>
+          <li><a href="#calculator">Bulk Inquiry</a></li>
+          <li><a href="#partners">Partner Onboarding</a></li>
+          <li><a href="#coverage">Coverage</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Corporate Site</a></li>
+          <li><a href="index.html#story">Our Story</a></li>
+          <li><a href="index.html#craft">The Craft</a></li>
+          <li><a href="index.html#journal">Journal</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#calculator">Place an Order</a></li>
+          <li><a href="#partners">Become a Partner</a></li>
+        </ul>
+        <p class="footer-contact">Pokhara Industrial Estate, Pokhara<br />+977 61 45 0000<br />sales@bakeland.com.np</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> Pokhara Foods Pvt. Ltd. All rights reserved.</p>
+      <p class="footer-note">Trade portal demo — built for pitch</p>
+    </div>
+  </footer>
+
+  <!-- ================================================================
+       MODAL — product details
+  ================================================================= -->
+  <div class="modal" id="productModal" hidden>
+    <div class="modal-card" id="modalCard" role="dialog" aria-modal="true" aria-label="Product details"></div>
+  </div>
+
+  <!-- ================================================================
+       TOAST
+  ================================================================= -->
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <script src="portal.js"></script>
+</body>
+</html>
