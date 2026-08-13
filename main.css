@@ -863,7 +863,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   .hero-eyebrow::before { display: none; }
   .hero-sub { margin-left: auto; margin-right: auto; }
   .hero-actions, .hero-trust { justify-content: center; }
-  .hero-collage { max-width: 460px; margin: 0 auto; height: 520px; }
+  .hero-collage { max-width: 460px; width: 100%; margin: 0 auto; height: 520px; }
   .hero-float-b { right: 0; }
   .families-grid, .journal-grid { grid-template-columns: 1fr 1fr; }
   .craft-step { grid-template-columns: 84px 1fr; }
